@@ -1,26 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import api from "./services/api";
 
 import "./styles.css";
 
 function App() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    api
+      .get("/projects")
+      .then((response) => {
+        setProjects(response.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   async function handleAddRepository() {
-    // TODO
+    const response = await api.post("/projects", {
+      title: `Front-end with ReactJS ${Date.now()}`,
+      owner: "Fernando Correa da Silva"
+    })
+    
+    const project = response.data;
+    setProjects([...projects, project])
   }
 
   async function handleRemoveRepository(id) {
-    // TODO
+    await api.delete(`projects/${id}`);
+
+    setProjects(projects.filter(project => project.id !== id))
   }
 
   return (
     <div>
-      <ul data-testid="repository-list">
-        <li>
-          Repositório 1
-
-          <button onClick={() => handleRemoveRepository(1)}>
-            Remover
-          </button>
-        </li>
+      <ul data-testid='repository-list'>
+        {projects.map(({ id, title }) => (
+          <li key={id}>
+            {title}
+            <button onClick={() => handleRemoveRepository(id)}>Remover</button>
+          </li>
+        ))}
       </ul>
 
       <button onClick={handleAddRepository}>Adicionar</button>
