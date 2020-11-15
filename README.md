@@ -43,7 +43,7 @@ To complete this challenge was necessary to follow these rules:
 
 ## :memo: Licence
 
-This project is under license from MIT. See the archive [LICENSE](../LICENSE) to more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for more information.
 
 ---
 
