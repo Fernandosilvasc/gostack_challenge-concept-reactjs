@@ -21,7 +21,7 @@ In this challenge, I created a application to put in practice what I have learne
 
 This will be an application to storage portfolio repositories, that will allow to list, update, and delete repositories, and besides that, the repositories can also receive likes.
 
-The last challenge I made the backend part that you can check through this url: **[Link](https://github.com/Fernandosilvasc/gostack_challenge-concept-nodejs)**
+The last challenge I made the backend part that you can check through this link: **[GoStack_challenge-concept-nodejs](https://github.com/Fernandosilvasc/gostack_challenge-concept-nodejs)**
 
 ### Application Routes
 
