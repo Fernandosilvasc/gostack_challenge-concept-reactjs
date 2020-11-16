@@ -23,7 +23,7 @@ This will be an application to storage portfolio repositories, that will allow t
 
 The last challenge I made the backend part that you can check through this link: **[GoStack_challenge-concept-nodejs](https://github.com/Fernandosilvasc/gostack_challenge-concept-nodejs)**
 
-### Application features
+### Application Features
 
 This was requested through that challenge.
 
